@@ -1,0 +1,35 @@
+weil-gaussian-lean
+Copyright 2025-2026 James C. Kerr (QuantQJ)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+Built on Mathlib (https://github.com/leanprover-community/mathlib4), Apache-2.0.
+
+Third-party code under OAI/ (ported 2026-11-11 to discharge QuasiRHWiring.QuasiRH):
+
+- OpenAI `math` (https://github.com/openai/math), commit 4eaee87548250b2682affda7d05d947c05554bae,
+  directory lean/OAI/. Copyright (c) OpenAI. Licensed under the Apache License, Version 2.0.
+  Included: the import closure of lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean
+  (theorem OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re), kept under its original module names.
+  Changes: ported from Lean v4.34.1 to Lean/Mathlib v4.35.0; each modified file's header lists its changes.
+
+- PrimeNumberTheoremAnd (https://github.com/AlexKontorovich/PrimeNumberTheoremAnd), commit
+  c39a751132c88b6e8080b74c74023fd95b3d8be0, with OpenAI's compatibility patch
+  lean/patches/PrimeNumberTheoremAnd-lean4341.patch. Copyright (c) Alex Kontorovich and the
+  PrimeNumberTheoremAnd contributors. Apache License, Version 2.0. Vendored as OAI/Vendor/PrimeNumberTheoremAnd/
+  (modules renamed PrimeNumberTheoremAnd.* -> OAI.Vendor.PrimeNumberTheoremAnd.*).
+
+- rellich-kondrachov (https://github.com/abenenson/rellich-kondrachov), commit
+  70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23, with OpenAI's compatibility patch
+  lean/patches/rellich-kondrachov-lean4341.patch. Copyright (c) 2026 Adam Benenson.
+  Apache License, Version 2.0. Vendored as OAI/Vendor/RellichKondrachov/
+  (modules renamed RellichKondrachov.* -> OAI.Vendor.RellichKondrachov.*).
+
+Code copied from QJ's kerr-lean repository (commit 99e57f1), added 2026-11-12, under Kerr/:
+- Kerr/NumberTheory/PowerfulNumbers*, Kerr/Zeta/*: (c) James C. Kerr (QuantQJ), Apache-2.0. The target
+  statement ErrorTermImprovement is copied from google-deepmind/formal-conjectures
+  (FormalConjectures/Wikipedia/PowerfulNumbersDensity.lean, commit a425ca3e), Apache-2.0,
+  (c) The Formal Conjectures Authors.
+- Kerr/PNT/*: copied from PrimeNumberTheoremAnd (https://github.com/AlexKontorovich/PrimeNumberTheoremAnd),
+  Apache-2.0, (c) the PrimeNumberTheoremAnd contributors (Kontorovich, Tao et al.). Kerr/PNT/Sobolev,
+  Fourier and SmoothExistence are wrapped in namespace KerrPNTV (and ZetaBounds/MediumPNT open it) so
+  they do not clash with the copy vendored under OAI/Vendor/.

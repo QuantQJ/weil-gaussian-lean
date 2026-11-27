@@ -1,0 +1,241 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\re}{Re}
+\begin{document}
+\title[A Gaussian form of Weil's positivity criterion]{A Gaussian form of Weil's positivity criterion\\ for the Riemann hypothesis}
+\author{James C. Kerr}
+\date{November 19, 2026}
+\subjclass[2020]{Primary 11M26; Secondary 11M06, 68V20}
+\keywords{Riemann hypothesis, Weil's criterion, explicit formula, Gaussian test functions, formal verification}
+\begin{abstract}
+We prove that the Riemann hypothesis is equivalent to the nonnegativity of an explicit real function
+$A_b(\alpha)$ of two real variables, built from the primes and the gamma function, for all $\alpha\in\R$ and $0<b\le 1$.
+By the explicit formula $A_b(\alpha)$ is the Gaussian-smoothed density of the zeta zeros, so the result
+restricts Weil's positivity criterion to a two-parameter family of Gaussian test functions.
+Two corollaries follow: a two-point log-convexity criterion, and a criterion in which only a sum over
+primes appears. All statements have been formally verified in Lean~4 with Mathlib.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+Write each nontrivial zero of $\zeta$ as $\rho=\tfrac12+\eta+i\gamma$ with $\eta,\gamma\in\R$,
+$|\eta|<\tfrac12$, and put $\tau_\rho=\gamma-i\eta$, so that $\rho=\tfrac12+i\tau_\rho$. The Riemann
+hypothesis (RH) says that every $\tau_\rho$ is real. For $b>0$ and $\alpha\in\R$ let
+\[
+g_{b,\alpha}(u)=e^{-bu^2-i\alpha u},\qquad
+G_{b,\alpha}(\tau)=\int_{\R}g_{b,\alpha}(u)e^{i\tau u}\,du=\sqrt{\pi/b}\;e^{-(\tau-\alpha)^2/(4b)}\quad(\tau\in\mathbb{C}),
+\]
+and define, with $\psi=\Gamma'/\Gamma$ and $\Lambda$ the von Mangoldt function,
+\begin{align*}
+P_b(\alpha)&=2\sqrt{\pi/b}\;e^{(1-4\alpha^2)/(16b)}\cos\!\big(\alpha/(4b)\big),\\
+W_b(\alpha)&=\frac{1}{\sqrt\pi}\int_{\R}e^{-u^2}\Big(\re\psi\big(\tfrac14+\tfrac i2(\alpha+2\sqrt b\,u)\big)-\log\pi\Big)\,du,\\
+S_b(\alpha)&=2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,e^{-b\log^2 n}\cos(\alpha\log n),\qquad
+A_b(\alpha)=P_b(\alpha)+W_b(\alpha)-S_b(\alpha).
+\end{align*}
+The function $A_b(\alpha)$ involves no zeros. Weil's explicit formula \cite{Weil}, in the form of Barner
+\cite{Barner} (see also \cite[Ch.~XVII]{Lang}), applies to $g_{b,\alpha}$, which is smooth with
+$g_{b,\alpha},g_{b,\alpha}'=O(e^{-|u|})$, and gives
+\begin{equation}\label{eq:EF}
+\sum_\rho G_{b,\alpha}(\tau_\rho)=A_b(\alpha)\qquad(b>0,\ \alpha\in\R),
+\end{equation}
+the sum running over the nontrivial zeros with multiplicity and converging absolutely. Thus $A_b(\alpha)$
+is the counting measure of the $\tau_\rho$ smoothed by a Gaussian of variance $2b$ centred at $\alpha$.
+
+\begin{theorem}\label{thm:main}
+The Riemann hypothesis holds if and only if $A_b(\alpha)\ge0$ for all $\alpha\in\R$ and all $0<b\le1$.
+\end{theorem}
+
+\begin{corollary}\label{cor:two}
+The Riemann hypothesis holds if and only if for every $0<b\le1$ there is $\alpha_0$ with $A_b(\alpha_0)>0$ and
+\begin{equation}\label{eq:two}
+A_b(\alpha+h)^2\le e^{h^2/(2b)}A_b(\alpha)\,A_b(\alpha+2h)\qquad(\alpha,h\in\R).
+\end{equation}
+\end{corollary}
+
+\begin{theorem}\label{thm:primes}
+Let $T_b(\alpha)=2\sum_{p}p^{-1/2}\log p\;e^{-b\log^2p}\cos(\alpha\log p)$, the sum over primes. The Riemann
+hypothesis holds if and only if for every $\alpha\in\R$ there is $C(\alpha)$ such that
+\begin{equation}\label{eq:primes}
+\big|P_b(\alpha)-T_b(\alpha)\big|\le C(\alpha)\,b^{-1/2}\qquad(0<b\le1).
+\end{equation}
+\end{theorem}
+
+\subsection*{Relation to known results}
+Weil \cite{Weil} showed that RH is equivalent to the nonnegativity of the zero-side functional
+$h\mapsto\sum_\rho\int_\R h(u)e^{i\tau_\rho u}\,du$ on autocorrelations $h=f*\tilde f$,
+$\tilde f(u)=\overline{f(-u)}$, for $f$ in a suitable class of test functions. Since $g_{b,\alpha}=f*\tilde f$ with $f(u)=(4b/\pi)^{1/4}e^{-2bu^2-i\alpha u}$, the
+condition in Theorem~\ref{thm:main} is Weil's condition for Gaussian $f$ only; the theorem says that this
+two-parameter family already suffices. Gaussians belong to Weil's class, so necessity is a case of his lemma.
+For sufficiency Weil takes, at an off-line zero $\tfrac12+\eta_0+i\gamma_0$, the test function with transform
+$|P(\tau-\gamma_0)|^2e^{-2A(\tau-\gamma_0)^2}$ on the line, where $P(z)=zQ(z)Q(-z)$: the factor $z$ makes the term of
+the off-line zero negative and $Q$ vanishes at the other nearby zeros \cite[p.~263]{Weil}; a Lean formalization
+of this argument is given in \cite{Lin}. Theorem~\ref{thm:main} shows that no polynomial factor is needed: the
+sign comes from the phase $e^{is\theta_\alpha(\rho)}$ after moving the centre $\alpha$ off $\gamma_0$. Sufficiency
+can also be deduced from Weil's argument, since convolving his function with $G_{b,x}$ and using \eqref{eq:EF}
+expresses its zero sum as a limit of integrals of $A_b(x)$ against a nonnegative weight; the direct proof below
+gives in addition the rate in Remark~\ref{rem:margin}. Other restrictions of the test class
+have been studied, notably to functions of compact support \cite{Yoshida,Bombieri} and to the sequence
+underlying Li's criterion \cite{Li,BL}; Weil himself later asked for classes of functions on which the
+positivity could be examined \cite[Commentaire]{Weil}. Related criteria with Gaussian test functions appear
+in \cite{Dow}, for all even Schwartz functions against a Gaussian weight, in \cite{Takahashi}, for translated
+Gaussian windows on the critical line, and in \cite{Dumas}, for a two-probe family of Gaussian observables
+together with a bound on the proper prime powers. For a reformulation of RH in a similar spirit see \cite{SD}.
+
+\section{Proof of Theorem \ref{thm:main}}
+Throughout $s=1/(4b)$, so $0<b\le1$ means $s\ge\tfrac14$. For a zero $\rho=\tfrac12+\eta+i\gamma$ and $\alpha\in\R$ put
+\[
+v_\alpha(\rho)=\eta^2-(\gamma-\alpha)^2,\qquad\theta_\alpha(\rho)=2\eta(\gamma-\alpha).
+\]
+Since $-(\tau_\rho-\alpha)^2=v_\alpha(\rho)+i\theta_\alpha(\rho)$, we have
+$G_{b,\alpha}(\tau_\rho)=\sqrt{\pi/b}\,e^{sv_\alpha(\rho)}e^{is\theta_\alpha(\rho)}$. The zeros are symmetric under
+$\rho\mapsto1-\bar\rho$, that is $(\eta,\gamma)\mapsto(-\eta,\gamma)$, with equal multiplicities, so by \eqref{eq:EF}
+\begin{equation}\label{eq:real}
+A_b(\alpha)=\sqrt{\pi/b}\,\sum_\rho e^{sv_\alpha(\rho)}\cos\big(s\,\theta_\alpha(\rho)\big).
+\end{equation}
+
+\begin{lemma}\label{lem:tail}
+Fix $\alpha\in\R$ and let $Z_\alpha$ be the finite set of zeros with $|\gamma-\alpha|\le1$, of cardinality $|Z_\alpha|$ with multiplicity. There is $C=C(\alpha)$ with
+$\sum_{\rho\notin Z_\alpha}e^{sv_\alpha(\rho)}\le C\,e^{-3s/4}$ for all $s\ge\tfrac14$.
+\end{lemma}
+\begin{proof}
+Let $x=(\gamma-\alpha)^2>1$. As $\eta^2<\tfrac14$, $v_\alpha(\rho)<\tfrac14-x\le-\tfrac34x$, and for $s\ge\tfrac14$,
+$\tfrac34sx\ge\tfrac34s+\tfrac3{16}(x-1)$. Hence $e^{sv_\alpha(\rho)}\le e^{-3s/4}e^{-\frac3{16}((\gamma-\alpha)^2-1)}$, and
+$C=\sum_\rho e^{-\frac3{16}((\gamma-\alpha)^2-1)}$ is finite because the number of zeros with $T<\gamma\le T+1$ is
+$O(\log(2+|T|))$ \cite[Thm.~9.2]{Titchmarsh}.
+\end{proof}
+
+\begin{lemma}\label{lem:dominant}
+Suppose $\rho_0=\tfrac12+\eta_0+i\gamma_0$ is a zero with $\eta_0\ne0$. Then there are $\alpha\in\R$, an integer
+$N\ge2$ and reals $M>0$, $\omega>0$, $\varepsilon>0$, $K\ge0$ such that for all $s\ge\tfrac14$
+\begin{equation}\label{eq:dom}
+\Big|\sum_\rho e^{sv_\alpha(\rho)}\cos\big(s\,\theta_\alpha(\rho)\big)-N e^{sM}\cos(s\omega)\Big|\le K\,e^{s(M-\varepsilon)} .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $I=(\gamma_0-|\eta_0|,\gamma_0+|\eta_0|)$. For $\alpha\in I$ we have $v_\alpha(\rho_0)>0$. If $v_\alpha(\rho)>0$ for
+some $\alpha\in I$ then $|\gamma-\alpha|<|\eta|<\tfrac12$, so $\eta\ne0$ and $|\gamma-\gamma_0|<1$; let $F$ be the finite
+set of such zeros. For $\rho,\rho'\in F$ with $\gamma\ne\gamma'$ the difference
+$v_\alpha(\rho)-v_\alpha(\rho')=\eta^2-\eta'^2-\gamma^2+\gamma'^2+2\alpha(\gamma-\gamma')$ is a nonconstant affine
+function of $\alpha$ and vanishes for at most one $\alpha$. We may therefore fix $\alpha\in I$ such that
+(a) $\alpha\ne\gamma$ for every $\rho\in F$, and (b) $v_\alpha(\rho)\ne v_\alpha(\rho')$ whenever $\rho,\rho'\in F$
+have different ordinates. Let $M=\max_\rho v_\alpha(\rho)$; then $M\ge v_\alpha(\rho_0)>0$, and the set $D$ of zeros with
+$v_\alpha(\rho)=M$ lies in $F$. By (b) all zeros in $D$ share one ordinate $\gamma_*$, hence one value of $\eta^2$, say
+$\eta_*^2>0$; by the symmetry $\eta\mapsto-\eta$, $D$ consists of $\tfrac12\pm\eta_*+i\gamma_*$, and its cardinality
+$N$ with multiplicity is at least $2$. By (a), $\omega:=2|\eta_*||\gamma_*-\alpha|>0$, and
+$\cos(s\theta_\alpha(\rho))=\cos(s\omega)$ for $\rho\in D$. The zeros in $Z_\alpha\setminus D$ are finitely many and
+satisfy $v_\alpha(\rho)\le M-\varepsilon$ for some $0<\varepsilon\le M+\tfrac34$. With $C$ from Lemma~\ref{lem:tail},
+the left side of \eqref{eq:dom} is at most $|Z_\alpha|e^{s(M-\varepsilon)}+Ce^{-3s/4}\le(|Z_\alpha|+C)e^{s(M-\varepsilon)}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+If RH holds, every $\eta=0$ and each term of \eqref{eq:real} equals $e^{-s(\gamma-\alpha)^2}>0$, so $A_b(\alpha)\ge0$.
+Conversely, suppose $A_b(\alpha)\ge0$ for all $\alpha$ and $0<b\le1$, and that some zero has $\eta_0\ne0$. Take
+$\alpha,N,M,\omega,\varepsilon,K$ from Lemma~\ref{lem:dominant} and $s_k=(2k+1)\pi/\omega$, $b_k=1/(4s_k)$. For large
+$k$ we have $s_k\ge\tfrac14$, and by \eqref{eq:real} and \eqref{eq:dom}
+\[
+\sqrt{b_k/\pi}\;A_{b_k}(\alpha)\le-Ne^{s_kM}+Ke^{s_k(M-\varepsilon)}=-e^{s_kM}\big(N-Ke^{-\varepsilon s_k}\big)<0
+\]
+once $Ke^{-\varepsilon s_k}<N$, a contradiction. Hence every $\eta=0$.
+\end{proof}
+
+\begin{remark}\label{rem:margin}
+The proof shows that an off-line zero forces $A_b(\alpha)\le-c\,b^{-1/2}e^{M/(4b)}$ along a sequence $b\to0$,
+for some $\alpha$ and $c,M>0$. On the other hand, if $\gamma<\gamma'$ are consecutive ordinates of zeros on the
+critical line with $g=\gamma'-\gamma$, the two nearest terms at $\alpha=(\gamma+\gamma')/2$ contribute
+$2\sqrt{\pi/b}\,e^{-g^2/(16b)}$. Under RH the margin in Theorem~\ref{thm:main} is therefore exponentially small as
+$b\to0$.
+\end{remark}
+
+\section{Proofs of Corollary \ref{cor:two} and Theorem \ref{thm:primes}}
+\begin{proof}[Proof of Corollary \ref{cor:two}]
+Assume RH. Then every $\tau_\rho=\gamma$ is real, and by \eqref{eq:real}
+\[
+F(\alpha):=\sqrt{b/\pi}\;e^{s\alpha^2}A_b(\alpha)=\sum_\gamma e^{-s\gamma^2}e^{2s\alpha\gamma}
+\]
+is a sum of positive exponentials, so $F(\alpha+h)^2\le F(\alpha)F(\alpha+2h)$ by the Cauchy--Schwarz inequality. Since
+$\alpha^2+(\alpha+2h)^2-2(\alpha+h)^2=2h^2$ and $2sh^2=h^2/(2b)$, this is \eqref{eq:two}; and $A_b>0$ because
+$\zeta$ has nontrivial zeros. Conversely, taking $\alpha+2h=\alpha_0$ in \eqref{eq:two} gives
+$A_b(\alpha)A_b(\alpha_0)\ge0$, hence $A_b(\alpha)\ge0$ for every $\alpha$, and Theorem~\ref{thm:main} applies.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:primes}]
+Let $0<b\le1$. By Stirling's formula $|\re\psi(\tfrac14+\tfrac i2r)|\le c_0(1+\log(2+|r|))$, so
+$|W_b(\alpha)|\le c_1(1+\log(2+|\alpha|))$. The prime powers $p^k$ with $k\ge3$ contribute to $S_b(\alpha)$ at most
+$2\sum_p\log p\sum_{k\ge3}p^{-k/2}<\infty$ in absolute value. For $k=2$, with $w(x)=e^{-4b\log^2x}$ and Chebyshev's
+bound $\vartheta(x)\le x\log4$, partial summation gives
+\[
+\sum_p\frac{\log p}{p}\,w(p)=-\int_1^\infty\vartheta(x)\,d\Big(\frac{w(x)}{x}\Big)
+\le\log4\Big(w(1)+\int_1^\infty\frac{w(x)}{x}\,dx\Big)=\log4\Big(1+\frac{\sqrt\pi}{4\sqrt b}\Big).
+\]
+Hence $|A_b(\alpha)-(P_b(\alpha)-T_b(\alpha))|\le c_2(\alpha)\,b^{-1/2}$, and \eqref{eq:primes} holds for a given
+$\alpha$ if and only if $r_s(\alpha):=\sum_\rho e^{sv_\alpha(\rho)}\cos(s\theta_\alpha(\rho))$ is bounded for
+$s\ge\tfrac14$. Under RH, $0<r_s(\alpha)\le|Z_\alpha|+C(\alpha)$ by Lemma~\ref{lem:tail}. If RH fails, take $\alpha$
+as in Lemma~\ref{lem:dominant} and $s_k=2k\pi/\omega$: then
+$r_{s_k}(\alpha)\ge e^{s_kM}(N-Ke^{-\varepsilon s_k})\to\infty$, so \eqref{eq:primes} fails for this $\alpha$.
+\end{proof}
+
+\section{Formal verification}
+\begin{sloppypar}
+The statements above are checked in Lean~4 (v4.35.0) against Mathlib (v4.35.0) \cite{mathlib}. The
+sources are available at \texttt{github.com/QuantQJ/weil-gaussian-lean}, and RH is Mathlib's
+\texttt{RiemannHypothesis}. Each theorem below depends only on the standard axioms \texttt{propext},
+\texttt{Classical.choice} and \texttt{Quot.sound}.
+\end{sloppypar}
+
+\smallskip
+\begin{center}
+\begin{tabular}{ll}
+\eqref{eq:EF} for Gaussians & \texttt{FleetPrimePoleBoundRH.zero\_trace\_eq\_rhs}\\
+Theorem \ref{thm:main}, zero side & \texttt{FleetHeatPositivityRH.RH\_iff\_heat\_positivity}\\
+Theorem \ref{thm:main}, arithmetic side & \texttt{FleetHeatPositivityRH.RH\_iff\_rhs\_positivity}\\
+Corollary \ref{cor:two} & \texttt{FleetTwoPointConvexity.RH\_iff\_twoPoint}\\
+Theorem \ref{thm:primes} & \texttt{FleetPrimeOnlyRH.RH\_iff\_primeOnly\_bound}
+\end{tabular}
+\end{center}
+\smallskip
+
+\noindent In the formal statements $A_b(\alpha)$ is \texttt{(rhs (gauss b $\alpha$)).re}, where \texttt{rhs} is the sum
+of the pole, archimedean and prime-power terms defined above. In \texttt{RH\_iff\_twoPoint} the existence of
+$\alpha_0$ is a hypothesis of the equivalence; the remark that it holds under RH uses the classical existence of a
+nontrivial zero and is not part of the formal statement. As a numerical check of \eqref{eq:EF},
+$A_{1/2}(20)=1.486853331\ldots$ both from the prime powers below $4723$ and from the first $40$ zeros.
+
+\subsection*{Acknowledgement}
+The Lean development and this note were prepared with the assistance of AI systems; every formal statement is
+checked by the Lean kernel.
+
+\begin{thebibliography}{99}
+\bibitem{Barner} K.~Barner, On A.~Weil's explicit formula, \emph{J. Reine Angew. Math.} \textbf{323} (1981), 139--152.
+\bibitem{Bombieri} E.~Bombieri, Remarks on Weil's quadratic functional in the theory of prime numbers, I,
+\emph{Rend. Mat. Acc. Lincei} (9) \textbf{11} (2000), 183--233.
+\bibitem{BL} E.~Bombieri and J.~C.~Lagarias, Complements to Li's criterion for the Riemann hypothesis,
+\emph{J. Number Theory} \textbf{77} (1999), 274--287.
+\bibitem{Dow} J.~Dow, The Prime--Resonance Operator, I--II, preprints, Zenodo, 2025,
+doi:10.5281/zenodo.17503095, doi:10.5281/zenodo.17605172.
+\bibitem{Dumas} A.~Dumas, Gaussian prime moments, M\"obius tails, and Weil forms, preprint, Zenodo, 2026,
+doi:10.5281/zenodo.24433167.
+\bibitem{Lang} S.~Lang, \emph{Algebraic Number Theory}, 2nd ed., Springer, 1994.
+\bibitem{Li} X.-J.~Li, The positivity of a sequence of numbers and the Riemann hypothesis,
+\emph{J. Number Theory} \textbf{65} (1997), 325--333.
+\bibitem{Lin} C.-K.~Lin, Formalizing Weil's explicit formula and positivity criterion for the Riemann hypothesis
+in Lean, preprint, Zenodo, 2026, doi:10.5281/zenodo.23494393.
+\bibitem{mathlib} The mathlib Community, The Lean mathematical library, in \emph{Proc. CPP 2020}, ACM, 2020, 367--381.
+\bibitem{SD} J.~Sondow and C.~Dumitrescu, A monotonicity property of Riemann's xi function and a reformulation
+of the Riemann hypothesis, \emph{Period. Math. Hungar.} \textbf{60} (2010), 37--40.
+\bibitem{Takahashi} T.~Takahashi, The WB-Bridge principle: refined spectral positivity and an RH-equivalent
+criterion, preprint, Zenodo, 2025, doi:10.5281/zenodo.17574853.
+\bibitem{Titchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-function}, 2nd ed., Oxford Univ. Press, 1986.
+\bibitem{Weil} A.~Weil, Sur les ``formules explicites'' de la th\'eorie des nombres premiers,
+\emph{Comm. S\'em. Math. Univ. Lund}, Tome Suppl. (1952), 252--265; reprinted with a Commentaire in
+\emph{\OE uvres Scientifiques} II, Springer, 1979, 48--61, 527--528.
+\bibitem{Yoshida} H.~Yoshida, On Hermitian forms attached to zeta functions, in \emph{Zeta Functions in Geometry},
+Adv. Stud. Pure Math. \textbf{21}, 1992.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,38 @@
+-- Vendored-tree audit: declarations that depend on OAI/ (see NOTICE).
+import QuasiRHProved
+import QuasiRHCorollaries
+import FleetPowerfulNumbers
+import FleetDirichletUnconditional
+import OAIExponentTrace
+#print axioms QuasiRHWiring.quasiRH_holds
+#print axioms QuasiRHWiring.abs_half_sub_re_le'
+#print axioms QuasiRHWiring.stripHalfWidth_two_fifths'
+#print axioms QuasiRHCorollaries.windowRate_unconditional
+#print axioms QuasiRHCorollaries.smoothWindowRate_unconditional
+#print axioms QuasiRHCorollaries.smoothWindowRateInf_le_unconditional
+#print axioms QuasiRHCorollaries.psi_error_unconditional
+#print axioms QuasiRHCorollaries.psi_explicit_unconditional
+#print axioms QuasiRHCorollaries.squarefreeError_unconditional
+#print axioms FleetPowerfulNumbers.kerrQuasiRH
+#print axioms FleetPowerfulNumbers.errorTermImprovement
+#print axioms FleetPowerfulNumbers.mertens_bound
+#print axioms FleetDirichletUnconditional.dirichletQuasiRH_holds
+#print axioms FleetDirichletUnconditional.LFunction_ne_zero_region_strict
+#print axioms FleetDirichletUnconditional.LFunction_ne_zero_kadiri_shape
+#print axioms FleetDirichletUnconditional.exists_nonresidue_le
+#print axioms OAIExponentTrace.hasCubicExponent_of_one_le
+#print axioms OAIExponentTrace.hasCubicExponent_one
+#print axioms OAIExponentTrace.marked_second_of_first
+#print axioms OAIExponentTrace.kappaPlain_eq
+#print axioms OAIExponentTrace.signal_exponent_split
+#print axioms OAIExponentTrace.relative_at_cut
+#print axioms OAIExponentTrace.sourceExponent_affine_in_d
+#print axioms OAIExponentTrace.genDenominator_code
+#print axioms OAIExponentTrace.genPrimeWeight_code
+#print axioms OAIExponentTrace.genPlainExponent_code
+#print axioms OAIExponentTrace.genCrossing_code
+#print axioms OAIExponentTrace.plain_coefficient_at_kappa
+#print axioms OAIExponentTrace.gen_inverse_at_crossing
+#print axioms OAIExponentTrace.gen_plain_at_crossing
+#print axioms OAIExponentTrace.balancedExponent_at_witness
+#print axioms OAIExponentTrace.endpoint_margin_window
