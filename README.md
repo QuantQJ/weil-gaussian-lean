@@ -7,6 +7,7 @@ criteria for the Riemann hypothesis stated on Gaussian test functions.
 
 `paper/heat_positivity.pdf` — J. C. Kerr, *A Gaussian form of Weil's positivity criterion for the
 Riemann hypothesis*. DOI: [10.5281/zenodo.24578253](https://doi.org/10.5281/zenodo.24578253).
+The Lean sources at tag `v1.1` are archived at DOI: [10.5281/zenodo.24578750](https://doi.org/10.5281/zenodo.24578750).
 
 | Statement in the paper | Lean theorem |
 |---|---|
