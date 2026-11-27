@@ -1,0 +1,30 @@
+RiemannHypothesis : Prop
+@FleetPrimePoleBoundRH.zero_trace_eq_rhs : ∀ {b : ℝ},
+  0 < b →
+    ∀ (α : ℝ),
+      ∑' (x : ZeroSumLimit.Index), GaussianTest.gaussHat b α (Reduction.ordinate (ZeroSumLimit.canonical x)) =
+        FleetFullLineArithmetic.rhs (GaussianTest.gauss b α)
+FleetHeatPositivityRH.RH_iff_heat_positivity : RiemannHypothesis ↔
+  ∀ (b : ℝ),
+    0 < b → b ≤ 1 → ∀ (α : ℝ), 0 ≤ (∑' (x : ZeroSumLimit.Index), GaussianTest.gaussHat b α (OffLineDetection.t x)).re
+FleetHeatPositivityRH.RH_iff_rhs_positivity : RiemannHypothesis ↔
+  ∀ (b : ℝ), 0 < b → b ≤ 1 → ∀ (α : ℝ), 0 ≤ (FleetFullLineArithmetic.rhs (GaussianTest.gauss b α)).re
+FleetTwoPointConvexity.RH_iff_twoPoint : (∀ (b : ℝ), 0 < b → b ≤ 1 → ∃ α₀, 0 < FleetTwoPointConvexity.Rb b α₀) →
+  (RiemannHypothesis ↔
+    ∀ (b : ℝ),
+      0 < b →
+        b ≤ 1 →
+          ∀ (α h : ℝ),
+            FleetTwoPointConvexity.Rb b (α + h) ^ 2 ≤
+              Real.exp (h ^ 2 / (2 * b)) * FleetTwoPointConvexity.Rb b α * FleetTwoPointConvexity.Rb b (α + 2 * h))
+FleetPrimeOnlyRH.RH_iff_primeOnly_bound : RiemannHypothesis ↔
+  ∀ (α : ℝ),
+    ∃ C',
+      ∀ (b : ℝ),
+        0 < b →
+          b ≤ 1 → ‖FleetPrimeSideConsequences.poleTerm b α - FleetPrimeOnlyRH.primeOnlySym b α‖ ≤ √(Real.pi / b) * C'
+'FleetPrimePoleBoundRH.zero_trace_eq_rhs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FleetHeatPositivityRH.RH_iff_heat_positivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FleetHeatPositivityRH.RH_iff_rhs_positivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FleetTwoPointConvexity.RH_iff_twoPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FleetPrimeOnlyRH.RH_iff_primeOnly_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

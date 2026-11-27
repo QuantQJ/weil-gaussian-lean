@@ -1,0 +1,1000 @@
+repo commit: a73eeae6e26c341676f0620ae16806063e2e8bf5
+started: 2026-11-27T05:57:47Z
+Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)
+mathlib rev: 56a005855ea17e0b0958f73ec801ae140b0a1679
+⚠ [9047/9166] Built FleetRationalBanks (61s)
+warning: FleetRationalBanks.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9166] Built FleetPrefixMeasure (62s)
+warning: FleetPrefixMeasure.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FleetPrefixMeasure.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FleetPrefixMeasure.lean:41:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: FleetPrefixMeasure.lean:107:0: 'FleetPrefixMeasure.locallyFinite_of_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetPrefixMeasure.lean:108:0: 'FleetPrefixMeasure.hasSum_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetPrefixMeasure.lean:109:0: 'FleetPrefixMeasure.integral_eq_finset_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetPrefixMeasure.lean:111:0: 'FleetPrefixMeasure.exists_prefix_integral_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9049/9166] Built FleetAtomicGluing (62s)
+warning: FleetAtomicGluing.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9050/9166] Built FleetExponentialEnvelope (62s)
+warning: FleetExponentialEnvelope.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FleetExponentialEnvelope.lean:23:64: Variable name `hE` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hE
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: FleetExponentialEnvelope.lean:70:0: 'FleetExponentialEnvelope.integral_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetExponentialEnvelope.lean:72:0: 'FleetExponentialEnvelope.integrable_tilted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetExponentialEnvelope.lean:73:0: 'FleetExponentialEnvelope.integral_norm_tilted_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9051/9166] Built FleetRealCompactification (62s)
+warning: FleetRealCompactification.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FleetRealCompactification.lean:54:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9052/9166] Built FleetGammaConjugation (62s)
+warning: FleetGammaConjugation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: FleetGammaConjugation.lean:43:0: 'FleetGammaConjugation.deriv_Gamma_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaConjugation.lean:44:0: 'FleetGammaConjugation.logDeriv_Gamma_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9053/9166] Built FleetGammaReflection (62s)
+warning: FleetGammaReflection.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9054/9166] Built FleetSmoothPeriodization (62s)
+warning: FleetSmoothPeriodization.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9055/9166] Built FleetGaussianEnvelopeTail (62s)
+warning: FleetGaussianEnvelopeTail.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9056/9166] Built FleetGammaDuplication (62s)
+warning: FleetGammaDuplication.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9057/9166] Built FleetPeriodizationSupport (62s)
+warning: FleetPeriodizationSupport.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: FleetPeriodizationSupport.lean:76:0: 'FleetPeriodizationSupport.unique_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetPeriodizationSupport.lean:77:0: 'FleetPeriodizationSupport.locallyFinite_shifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetPeriodizationSupport.lean:78:0: 'FleetPeriodizationSupport.central_tsum_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetPeriodizationSupport.lean:79:0: 'FleetPeriodizationSupport.norm_tsum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9058/9166] Built FleetPeriodicApproximation (62s)
+warning: FleetPeriodicApproximation.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9059/9166] Built FleetAtomicLimit (63s)
+warning: FleetAtomicLimit.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9060/9166] Built FleetWeightedTrace (64s)
+warning: FleetWeightedTrace.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9061/9166] Built FleetGammaFiniteProduct (30s)
+warning: FleetGammaFiniteProduct.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9062/9166] Built LogDerivResidue (30s)
+warning: LogDerivResidue.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9063/9166] Built ZetaLogDerivPole (30s)
+warning: ZetaLogDerivPole.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9064/9166] Built FunctionalEqLogDeriv (30s)
+warning: FunctionalEqLogDeriv.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9065/9166] Built FleetDigammaSeries (31s)
+warning: FleetDigammaSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9066/9166] Built FleetTangentBound (31s)
+warning: FleetTangentBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9067/9166] Built RectangleWinding (31s)
+warning: RectangleWinding.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9068/9166] Built HorizontalDecay (30s)
+warning: HorizontalDecay.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9069/9166] Built Residue (31s)
+warning: Residue.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Residue.lean:134:6: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+warning: Residue.lean:134:52: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+warning: Residue.lean:135:4: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+warning: Residue.lean:136:4: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+⚠ [9070/9166] Built ExpSumLowerBound (31s)
+warning: ExpSumLowerBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ExpSumLowerBound.lean:76:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: ExpSumLowerBound.lean:95:10: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  intervalIntegral.integral_finset_̵s̵S̲um
+warning: ExpSumLowerBound.lean:130:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ExpSumLowerBound.lean:133:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ExpSumLowerBound.lean:137:8: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ExpSumLowerBound.lean:150:2: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9071/9166] Built RealSideBound (31s)
+warning: RealSideBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: RealSideBound.lean:36:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9072/9166] Built ExplicitFormula (31s)
+warning: ExplicitFormula.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ExplicitFormula.lean:66:19: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [9073/9166] Built Jensen (32s)
+warning: Jensen.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Jensen.lean:129:6: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jensen.lean:388:5: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: Jensen.lean:397:6: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  intervalIntegral.integral_finset_̵s̵S̲um
+warning: Jensen.lean:601:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Jensen.lean:603:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Jensen.lean:620:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Jensen.lean:628:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Jensen.lean:630:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Jensen.lean:635:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Jensen.lean:639:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9074/9166] Built ZeroSumConvergence (33s)
+warning: ZeroSumConvergence.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZeroSumConvergence.lean:67:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9075/9166] Built FleetLocalAtomicLimit (27s)
+warning: FleetLocalAtomicLimit.lean:74:4: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: FleetLocalAtomicLimit.lean:87:6: `MeasureTheory.integral_finset_sum_measure` has been deprecated: Use `MeasureTheory.integral_finsetSum_measure` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um_measure
+⚠ [9076/9166] Built FleetCompactSlots (27s)
+warning: FleetCompactSlots.lean:26:4: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+⚠ [9077/9166] Built FleetGammaIdentification (27s)
+warning: FleetGammaIdentification.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+ℹ [9078/9166] Built FleetPeriodicReplacement (28s)
+info: FleetPeriodicReplacement.lean:50:0: 'FleetPeriodicReplacement.exists_periodic_replacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9079/9166] Built FleetOrderedAtoms (27s)
+warning: FleetOrderedAtoms.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FleetOrderedAtoms.lean:16:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FleetOrderedAtoms.lean:17:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9080/9166] Built FleetTrigPrimitive (28s)
+warning: FleetTrigPrimitive.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [9081/9166] Built RectangleResidue (27s)
+⚠ [9082/9166] Built FleetDigammaGrowth (28s)
+warning: FleetDigammaGrowth.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9083/9166] Built Reduction (27s)
+warning: Reduction.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Reduction.lean:107:8: Overlapping instance parameters in `hilbert_polya_reduction_selfAdjoint`:
+
+⚠️ `[CStarAlgebra A]` and `[StarModule ℂ A]` each imply `[StarModule ℂ A]`.
+💡️ Of these, `[StarModule ℂ A]` may be removed.
+
+Note: This linter can be disabled with `set_option linter.overlappingInstances false`
+⚠ [9084/9166] Built PartialFractions (29s)
+warning: PartialFractions.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: PartialFractions.lean:260:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PartialFractions.lean:395:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PartialFractions.lean:396:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PartialFractions.lean:412:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PartialFractions.lean:425:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9085/9166] Built ZetaGrowth (30s)
+warning: ZetaGrowth.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZetaGrowth.lean:222:40: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: ZetaGrowth.lean:327:27: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9086/9166] Built FleetEncodedAtoms (29s)
+warning: FleetEncodedAtoms.lean:23:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: FleetEncodedAtoms.lean:46:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9087/9166] Built FleetGammaGrowth (29s)
+warning: FleetGammaGrowth.lean:33:32: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [_root_.abs_of_nonneg hσ0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9088/9166] Built FleetTrigDensity (29s)
+warning: FleetTrigDensity.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FleetTrigDensity.lean:16:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: FleetTrigDensity.lean:15:10: This simp argument is unused:
+  fourier_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FleetTrigDensity.lean:62:10: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: FleetTrigDensity.lean:85:22: This simp argument is unused:
+  fourier_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Q, a, h0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FleetTrigDensity.lean:86:12: This simp argument is unused:
+  Finset.erase_eq_of_notMem h0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Q, a, h0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9089/9166] Built FleetSlotLimit (30s)
+warning: FleetSlotLimit.lean:86:51: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: FleetSlotLimit.lean:94:51: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+info: FleetSlotLimit.lean:107:0: 'FleetSlotLimit.limit_locallyFinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetSlotLimit.lean:108:0: 'FleetSlotLimit.compact_trace_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9090/9166] Built ZerosCountable (28s)
+warning: ZerosCountable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9091/9166] Built ZetaConj (28s)
+warning: ZetaConj.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9092/9166] Built ZeroSymmetry (28s)
+warning: ZeroSymmetry.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZeroSymmetry.lean:99:4: Unused tactic linter: `norm_num` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9093/9166] Built ZetaStrip (29s)
+warning: ZetaStrip.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZetaStrip.lean:37:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: ZetaStrip.lean:58:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9094/9166] Built FleetLocalMeasureIdentity (31s)
+warning: FleetLocalMeasureIdentity.lean:34:22: Unused tactic linter: `change (c t : ℂ) = 0` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9095/9166] Built TestFunctions (29s)
+warning: TestFunctions.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: TestFunctions.lean:388:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9096/9166] Built ZetaLowerBound (29s)
+warning: ZetaLowerBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9097/9166] Built ZetaGrowthNeg (30s)
+warning: ZetaGrowthNeg.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZetaGrowthNeg.lean:227:40: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: ZetaGrowthNeg.lean:300:27: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9098/9166] Built FiniteZeros (22s)
+warning: FiniteZeros.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteZeros.lean:97:37: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: FiniteZeros.lean:97:50: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9099/9166] Built FleetFourierLittleO (21s)
+warning: FleetFourierLittleO.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9100/9166] Built ContourShift (22s)
+warning: ContourShift.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ContourShift.lean:97:54: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ContourShift.lean:110:54: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ContourShift.lean:123:54: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ContourShift.lean:136:54: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9101/9166] Built FleetCompactExponentialBound (21s)
+warning: FleetCompactExponentialBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: FleetCompactExponentialBound.lean:63:0: 'FleetCompactExponentialBound.testFn_exists_common_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9102/9166] Built PrimeSideLaplace (22s)
+warning: PrimeSideLaplace.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9103/9166] Built FleetPeriodicC2Density (23s)
+warning: FleetPeriodicC2Density.lean:37:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FleetPeriodicC2Density.lean:111:10: This simp argument is unused:
+  fourier_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [polynomial, doublePrimitive, primitive, add_mul, Finset.sum_add_distrib, h0, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FleetPeriodicC2Density.lean:113:10: This simp argument is unused:
+  fourier_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [polynomial, doublePrimitive, primitive, add_mul, Finset.sum_add_distrib, h0, Finset.sum_ite_eq',
+    frequency]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9104/9166] Built GaussianTest (23s)
+warning: GaussianTest.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GaussianTest.lean:229:14: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [abs_of_pos hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianTest.lean:357:33: This simp argument is unused:
+  Complex.mul_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [pow_two, Complex.mul_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianTest.lean:445:41: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: GaussianTest.lean:613:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: GaussianTest.lean:615:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9105/9166] Built ZetaGrowthEM3 (23s)
+warning: ZetaGrowthEM3.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9106/9166] Built FleetFullLineFourier (21s)
+warning: FleetFullLineFourier.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9107/9166] Built SegmentIntegrability (21s)
+warning: SegmentIntegrability.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: SegmentIntegrability.lean:69:29: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: SegmentIntegrability.lean:117:40: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, I_re, mul_zero, ofReal_im, I_im, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SegmentIntegrability.lean:131:40: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, I_re, mul_zero, ofReal_im, I_im, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SegmentIntegrability.lean:145:40: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, I_re, mul_zero, ofReal_im, I_im, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SegmentIntegrability.lean:159:40: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, I_re, mul_zero, ofReal_im, I_im, mul_one, sub_zero, add_zero, add_im,
+    mul_im, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9108/9166] Built PrincipalPartDischarge (21s)
+warning: PrincipalPartDischarge.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: PrincipalPartDischarge.lean:64:17: This simp argument is unused:
+  ZetaLogDerivPole.Gammaℝ_inv_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [zetaNum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PrincipalPartDischarge.lean:161:5: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PrincipalPartDischarge.lean:175:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PrincipalPartDischarge.lean:271:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PrincipalPartDischarge.lean:275:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PrincipalPartDischarge.lean:313:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PrincipalPartDischarge.lean:316:76: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9109/9166] Built ZeroDensity (23s)
+warning: ZeroDensity.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZeroDensity.lean:330:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: ZeroDensity.lean:281:26: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZeroDensity.lean:284:26: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZeroDensity.lean:300:32: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZeroDensity.lean:467:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [9110/9166] Built FleetExponentialFourierBound (17s)
+info: FleetExponentialFourierBound.lean:60:27: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: FleetExponentialFourierBound.lean:63:27: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: FleetExponentialFourierBound.lean:66:0: 'FleetExponentialFourierBound.weighted_norm_h_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetExponentialFourierBound.lean:67:0: 'FleetExponentialFourierBound.imaginary_norm_h_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9111/9166] Built ZeroDensityUnconditional (17s)
+warning: ZeroDensityUnconditional.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9112/9166] Built ZeroAvoidingHeights (20s)
+warning: ZeroAvoidingHeights.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZeroAvoidingHeights.lean:107:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9113/9166] Built LogDerivSegmentBound (21s)
+warning: LogDerivSegmentBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LogDerivSegmentBound.lean:174:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: LogDerivSegmentBound.lean:371:35: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LogDerivSegmentBound.lean:374:35: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LogDerivSegmentBound.lean:396:41: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LogDerivSegmentBound.lean:466:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: LogDerivSegmentBound.lean:593:16: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9114/9166] Built ZeroSumLimit (22s)
+warning: ZeroSumLimit.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: ZeroSumLimit.lean:72:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: ZeroSumLimit.lean:101:57: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: ZeroSumLimit.lean:365:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: ZeroSumLimit.lean:316:26: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZeroSumLimit.lean:319:26: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZeroSumLimit.lean:335:32: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZeroSumLimit.lean:457:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: ZeroSumLimit.lean:621:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: ZeroSumLimit.lean:702:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: ZeroSumLimit.lean:704:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ZeroSumLimit.lean:724:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: ZeroSumLimit.lean:766:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ZeroSumLimit.lean:775:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ZeroSumLimit.lean:776:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9115/9166] Built SegmentBoundUnconditional (21s)
+warning: SegmentBoundUnconditional.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9116/9166] Built OffLineDetection (20s)
+warning: OffLineDetection.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: OffLineDetection.lean:73:16: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: OffLineDetection.lean:91:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: OffLineDetection.lean:98:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: OffLineDetection.lean:122:6: This simp argument is unused:
+  Complex.mul_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [vE, thetaE, sq, Complex.neg_im, Complex.mul_im, Complex.sub_re, Complex.sub_im, Complex.ofReal_re,
+    Complex.ofReal_im, Complex.add_im, Complex.I_re, Complex.I_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: OffLineDetection.lean:184:18: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9117/9166] Built LeftLineBound (21s)
+warning: LeftLineBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LeftLineBound.lean:130:28: Unused tactic linter: `skip` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LeftLineBound.lean:229:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9118/9166] Built HorizontalVanishingSeq (17s)
+warning: HorizontalVanishingSeq.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9119/9166] Built ExplicitFormulaZeroSide (17s)
+warning: ExplicitFormulaZeroSide.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9120/9166] Built TraceInterface (17s)
+warning: TraceInterface.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9121/9166] Built GaussianTraceFormula (18s)
+warning: GaussianTraceFormula.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GaussianTraceFormula.lean:108:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: GaussianTraceFormula.lean:133:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: GaussianTraceFormula.lean:265:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianTraceFormula.lean:279:29: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: GaussianTraceFormula.lean:282:29: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: GaussianTraceFormula.lean:283:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: GaussianTraceFormula.lean:351:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianTraceFormula.lean:361:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianTraceFormula.lean:364:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9122/9166] Built TraceRealizationRH (20s)
+warning: TraceRealizationRH.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: TraceRealizationRH.lean:53:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+✔ [9123/9166] Built FleetTraceBoundRH (20s)
+✔ [9124/9166] Built FleetArithmeticBoundRH (17s)
+✔ [9125/9166] Built GammaExplicitFormula (18s)
+✔ [9126/9166] Built FleetSpectralTraceLimit (17s)
+⚠ [9127/9166] Built FleetPrimeFunctionalBound (18s)
+warning: FleetPrimeFunctionalBound.lean:17:30: Variable name `hE` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hE
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9128/9166] Built FleetGammaKernel (18s)
+⚠ [9129/9166] Built FleetKernelGrowth (18s)
+warning: FleetKernelGrowth.lean:23:10: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [9130/9166] Built FleetGammaPole (18s)
+info: FleetGammaPole.lean:155:0: 'FleetGammaPole.exists_analytic_regular_part' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaPole.lean:156:0: 'FleetGammaPole.exists_analytic_regular_part_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaPole.lean:158:0: 'FleetGammaPole.analyticAt_gammaKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaPole.lean:159:0: 'FleetGammaPole.exists_analytic_regular_part_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9131/9166] Built FleetGammaContour (19s)
+info: FleetGammaContour.lean:128:0: 'FleetGammaContour.exists_analytic_weighted_regular_part' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaContour.lean:130:0: 'FleetGammaContour.segmentIntegrable_gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaContour.lean:131:0: 'FleetGammaContour.gamma_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9132/9166] Built FleetGammaContourLimit (16s)
+info: FleetGammaContourLimit.lean:179:0: 'FleetGammaContourLimit.archimedean_eq_digamma_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaContourLimit.lean:180:0: 'FleetGammaContourLimit.integrable_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGammaContourLimit.lean:181:0: 'FleetGammaContourLimit.horizontal_vanish' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9133/9166] Built FleetStandardExplicitFormula (15s)
+✔ [9134/9166] Built FleetFullLineArithmetic (17s)
+✔ [9135/9166] Built FleetGlobalRealization (17s)
+✔ [9136/9166] Built FleetArchimedeanFunctionalBound (18s)
+✔ [9137/9166] Built FleetFullLineLinearity (17s)
+✔ [9138/9166] Built FleetWeightedAtomicClosure (17s)
+⚠ [9139/9166] Built FleetFiniteApproximation (17s)
+warning: FleetFiniteApproximation.lean:23:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FleetFiniteApproximation.lean:28:10: `MeasureTheory.integrable_finset_sum_measure` has been deprecated: Use `MeasureTheory.integrable_finsetSum_measure` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um_measure
+✔ [9140/9166] Built FleetArithmeticContinuity (17s)
+⚠ [9141/9166] Built FleetFiniteSpectrumCompactness (18s)
+warning: FleetFiniteSpectrumCompactness.lean:36:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FleetFiniteSpectrumCompactness.lean:55:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9142/9166] Built FleetExponentialSpace (17s)
+ℹ [9143/9166] Built FleetGaussianDictionaryMember (18s)
+info: FleetGaussianDictionaryMember.lean:78:0: 'FleetGaussianDictionaryMember.exists_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9144/9166] Built FleetArithmeticDifference (18s)
+✔ [9145/9166] Built FleetGaussianUntwist (17s)
+⚠ [9146/9166] Built FleetGaussianFiniteSpan (17s)
+warning: FleetGaussianFiniteSpan.lean:35:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+✔ [9147/9166] Built FleetArithmeticLinearSpan (17s)
+✔ [9148/9166] Built FleetApproximationTransfer (17s)
+⚠ [9149/9166] Built FleetPrimePoleBoundRH (17s)
+warning: FleetPrimePoleBoundRH.lean:50:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [9150/9166] Built FleetGaussianMultiplier (18s)
+info: FleetGaussianMultiplier.lean:127:0: 'FleetGaussianMultiplier.exists_multiplier_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: FleetGaussianMultiplier.lean:128:0: 'FleetGaussianMultiplier.pointwise_polynomial_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9151/9166] Built FleetLinearDictionary (16s)
+warning: FleetLinearDictionary.lean:18:13: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+✔ [9152/9166] Built FleetDampedPeriodicApproximation (16s)
+✔ [9153/9166] Built FleetGaussianPeriodizationTail (16s)
+✔ [9154/9166] Built FleetExponentialDictionary (17s)
+✔ [9155/9166] Built FleetGaussianDensity (15s)
+✔ [9156/9166] Built FleetGaussianCriterion (16s)
+✔ [9157/9166] Built FleetFiniteGaussianFeasibility (16s)
+✔ [9158/9166] Built FleetRationalBankCriterion (15s)
+✔ [9159/9166] Built FleetPrimeSideConsequences (17s)
+⚠ [9160/9166] Built FleetPrimeOnlyRH (18s)
+warning: FleetPrimeOnlyRH.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FleetPrimeOnlyRH.lean:279:36: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: FleetPrimeOnlyRH.lean:479:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: FleetPrimeOnlyRH.lean:493:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9161/9166] Built FleetLowZeroFree (19s)
+warning: FleetLowZeroFree.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [9162/9166] Built FleetPrimeTarget (16s)
+✔ [9163/9166] Built FleetSquareBank (16s)
+⚠ [9164/9166] Built FleetExponentLadder (16s)
+warning: FleetExponentLadder.lean:121:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9165/9166] Built FleetHeatPositivityRH (24s)
+warning: FleetHeatPositivityRH.lean:202:21: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: FleetHeatPositivityRH.lean:302:9: Variable name `b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9166/9166] Built FleetTwoPointConvexity (16s)
+warning: FleetTwoPointConvexity.lean:102:20: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: FleetTwoPointConvexity.lean:105:18: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: FleetTwoPointConvexity.lean:113:11: Variable name `b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (9166 jobs).
+exit: 0  finished: 2026-11-27T06:10:13Z

@@ -1,0 +1,16 @@
+import FleetPrimePoleBoundRH
+import FleetHeatPositivityRH
+import FleetTwoPointConvexity
+import FleetPrimeOnlyRH
+
+#check @RiemannHypothesis
+#check @FleetPrimePoleBoundRH.zero_trace_eq_rhs
+#check @FleetHeatPositivityRH.RH_iff_heat_positivity
+#check @FleetHeatPositivityRH.RH_iff_rhs_positivity
+#check @FleetTwoPointConvexity.RH_iff_twoPoint
+#check @FleetPrimeOnlyRH.RH_iff_primeOnly_bound
+#print axioms FleetPrimePoleBoundRH.zero_trace_eq_rhs
+#print axioms FleetHeatPositivityRH.RH_iff_heat_positivity
+#print axioms FleetHeatPositivityRH.RH_iff_rhs_positivity
+#print axioms FleetTwoPointConvexity.RH_iff_twoPoint
+#print axioms FleetPrimeOnlyRH.RH_iff_primeOnly_bound

@@ -37,6 +37,11 @@ lake build FleetPrimePoleBoundRH FleetHeatPositivityRH FleetTwoPointConvexity Fl
 - `Kerr/`: number-theory modules shared with other projects
 - `OAI/`: third-party code, see `NOTICE`
 
+## Build record
+
+`verification/` holds the build log and the axiom printout for the theorems cited in the paper.
+
 ## License
 
-Apache-2.0. Third-party code and credits are listed in `NOTICE`.
+Lean sources: Apache-2.0. Third-party code and credits are listed in `NOTICE`.
+Paper (`paper/`): CC BY 4.0.
